@@ -12,7 +12,7 @@ def calcenergy(atoms):
     ekin = atoms.get_kinetic_energy() / len(atoms)
     inst_temp = ekin / (1.5 * units.kB)
     tote = epot + ekin
-    return [inst_temp, ekin, inst_temp, tote]
+    return [epot, ekin, inst_temp, tote]
 
 def run_md():
     # Use Asap for a huge performance increase if it is installed
