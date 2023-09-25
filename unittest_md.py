@@ -21,7 +21,7 @@ class MdTests(unittest.TestCase):
         # Set the momenta corresponding to T=300K
         MaxwellBoltzmannDistribution(atoms, temperature_K=300)
         
-        self.assertTrue(not(0.01 < (calcenergy(atoms))[0] < 0.03))
+        self.assertTrue(-0.03 < (calcenergy(atoms))[0] < 0.03)
         
 if __name__ == "__main__":
     tests = [unittest.TestLoader().loadTestsFromTestCase(MdTests)]
